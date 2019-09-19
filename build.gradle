@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Common
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// JPA dependencies
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// postgresql
+	// compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+	// Batch
+	implementation 'org.springframework.boot:spring-boot-starter-batch'
+	testImplementation 'org.springframework.batch:spring-batch-test'
+	// h2
+	runtimeOnly 'com.h2database:h2'
+	// mail
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+}
