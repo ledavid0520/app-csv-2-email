@@ -28,4 +28,7 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	// mail
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	// Security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.security:spring-security-test'
 }
